@@ -2,21 +2,6 @@ import discord
 from discord.ext import commands 
 import requests
 import io
-from flask import Flask
-from threading import Thread
-
-app = Flask('')
-
-@app.route('/')
-def home():
-    return "Hello. I am alive!"
-
-def run():
-  app.run(host='0.0.0.0',port=8080)
-
-def keep_alive():
-    t = Thread(target=run)
-    t.start()
 
 
 client = commands.Bot(command_prefix = "!")
@@ -54,6 +39,4 @@ async def on_message(message):
             print("Success...")
             # await message.channel.send(url_download)
 
-client.run('OTUxNTIyNzgyNzUwMDU2NTAw.YiospQ.9uNMnAmrNkDRQ9R8d7zqei81mdc')
-
-keep_alive()
+client.run('OTUxNTIyNzgyNzUwMDU2NTAw.YiospQ.3uWZAUkiYV0sCwS1FU6cOzTS8pY')
